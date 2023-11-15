@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InformationSecurityConference"
+        xmlns:vm="clr-namespace:InformationSecurityConference.ViewModels"
         mc:Ignorable="d" 
         Title="LOG IN" Height="550" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen"
          Background="Transparent" AllowsTransparency="True">
+    <Window.DataContext>
+        <vm:LogInViewModel></vm:LogInViewModel>
+    </Window.DataContext>
     <Border CornerRadius="10"                    
             BorderThickness="2"
             Opacity="0.95">
@@ -87,6 +91,7 @@
                                FontFamily="Montserrat"                             
                                Margin="0,35,0,0"/>
                 <TextBox x:Name="txtUser"
+                         Text="{Binding Username}"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
@@ -105,6 +110,7 @@
                                FontFamily="Montserrat"                             
                                Margin="0,15,0,0"/>
                 <PasswordBox x:Name="txtPass"
+                             MaxLength="12"
                              FontSize="13"
                              FontWeight="Medium"
                              FontFamily="Montserrat"                            
@@ -124,7 +130,7 @@
                             FontFamily="Montserrat"
                             Cursor="Hand"                           
                             Margin="0,50,0,0"
-                            Click="btnLogin_Click">
+                            Command="{Binding LogIn}">
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="#462AD8"/>

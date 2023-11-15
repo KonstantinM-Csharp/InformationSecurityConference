@@ -83,6 +83,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserstoreModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Commands\Command.cs" />
+    <Compile Include="ViewModels\Commands\LambdaCommand.cs" />
     <Compile Include="ViewModels\LogInViewModel.cs" />
     <Compile Include="ViewModels\ViewModel.cs" />
     <Page Include="MainWindow.xaml">

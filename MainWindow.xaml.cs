@@ -24,11 +24,7 @@ namespace InformationSecurityConference
         public MainWindow()
         {
             InitializeComponent();
-            using (var context = new userstoreEntities1())
-            {
-               
-                // использование полученных данных
-            }
+          
         }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)

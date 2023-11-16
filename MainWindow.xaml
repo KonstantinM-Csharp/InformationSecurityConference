@@ -51,8 +51,9 @@
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="1"
-                            Click="btnMinimize_Click"></Button>
-                <Button x:Name="btnMClose"                           
+                            Command="{Binding MinimazeWindow}"></Button>
+                <Button x:Name="btnMClose"     
+                            Command="{Binding CloseApplication}"
                             BorderThickness="0"
                             Content="x"
                             Background="#FFD13CFF"
@@ -60,8 +61,7 @@
                             FontSize="12"
                             FontFamily="Montserrat"
                             Cursor="Hand"
-                            Grid.Column="2"
-                            Click="btnMClose_Click">
+                            Grid.Column="2">
                 </Button>
             </Grid>
             <StackPanel Width="220"

@@ -24,22 +24,6 @@ namespace InformationSecurityConference
         public MainWindow()
         {
             InitializeComponent();
-          
-        }
-
-        private void btnMinimize_Click(object sender, RoutedEventArgs e)
-        {
-            WindowState = WindowState.Minimized;    
-        }
-
-        private void btnMClose_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
